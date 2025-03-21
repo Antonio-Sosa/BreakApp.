@@ -8,10 +8,10 @@ WORKDIR /nodelogin
 COPY package*.json ./
 
 # Instale as dependências
-RUN npm install
+RUN npm install --production
 
 # Copie todo o restante dos arquivos
-COPY . .
+COPY package*.json ./
 
 # Expor a porta que o app irá rodar
 EXPOSE 3000
